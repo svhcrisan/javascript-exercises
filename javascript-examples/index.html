@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal-header">
+            <h3>Checkout</h3>
+            <button class="close-modal">x</button>
+        </div>
+        <div class="modal-body">
+            <form  onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="firstName">
+                        First Name*
+                        <span class="tooltip-text">This field is required.</span>:</label>
+                    <input type="text" id="firstName" name="firstName" />
+                </div>
+                <div class="form-group">
+                    <label for="lastName">
+                        Last Name*
+                        <span class="tooltip-text">This field is required.</span>:</label>
+                    <input type="text" id="lastName" name="lastName" />
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                        Email*
+                        <span class="tooltip-text">This field is required.</span>:</label>
+                    <input type="text" id="email" name="email" />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="address" />
+                </div>
+                <div class="form-group">
+                    <label>Delivered by:</label>
+                    <label for="post">
+                        <input type="radio" id="post" name="delivery" value="post" checked />
+                        Post Service
+                    </label>
+                    <label>
+                        <input type="radio" id="courier" name="delivery" value="courier" />
+                        Courier
+                    </label>
+                </div>
+                <div class="form-group comments">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+                <table class="products">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="product">
+                            <td>1</td>
+                            <td>Missha All Around Safe Block Sebum Zero Sun</td>
+                            <td class="price">4</td>
+                            <td>
+                                <span class="remove">-</span>
+                                <span class="quantity">2</span>
+                                <span class="add" onclick="incrementor(); return false">+</span></td>
+                            <td class="price">8</td>
+                            <td>
+                                <button class="remove-item">x</button>
+                            </td>
+                        </tr>
+                        <tr class="product">
+                            <td>2</td>
+                            <td>Innisfree Green Tea Balancing Cream</td>
+                            <td class="price">4</td>
+                            <td>
+                                <span class="remove">-</span>
+                                <span class="quantity">2</span>
+                                <span class="add">+</span></td>
+                            <td class="price">8</td>
+                            <td>
+                                <button class="remove-item">x</button>
+                            </td>
+                        </tr>
+                        <tr class="product">
+                            <td>1</td>
+                            <td>Missha All Around Safe Block Sebum Zero Sun</td>
+                            <td class="price">4</td>
+                            <td>
+                                <span class="remove">-</span>
+                                <span class="quantity">2</span>
+                                <span class="add">+</span>
+                            </td>
+                            <td class="price">8</td>
+                            <td>
+                                <button class="remove-item">x</button>
+                            </td>
+                        </tr>
+                        <tr class="product">
+                            <td>1</td>
+                            <td>Missha All Around Safe Block Sebum Zero Sun</td>
+                            <td class="price">4</td>
+                            <td>
+                                <span class="remove">-</span>
+                                <span class="quantity">2</span>
+                                <span class="add">+</span>
+                            </td>
+                            <td class="price">8</td>
+                            <td>
+                                <button class="remove-item">x</button>
+                            </td>
+                        </tr>
+                        <tr class="product">
+                            <td>1</td>
+                            <td>Missha All Around Safe Block Sebum Zero Sun</td>
+                            <td class="price">4</td>
+                            <td>
+                                <span class="remove">-</span>
+                                <span class="quantity">2</span>
+                                <span class="add">+</span>
+                            </td>
+                            <td class="price">8</td>
+                            <td>
+                                <button class="remove-item">x</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" style="text-align: left;">Total</td>
+                            <td colspan="2" class="total price">40</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <butto id="checkout" onclick="validateForum()" >Checkout</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>
